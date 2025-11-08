@@ -1,5 +1,8 @@
 class SkinCareAI {
     constructor() {
+        // API configuration - Worker URL
+        this.API_BASE_URL = 'https://osl-skin-ai.ivanleejackson.workers.dev';
+
         this.modal = document.getElementById('chatModal');
         this.authModal = document.getElementById('authModal');
         this.chatMessages = document.getElementById('chatMessages');
@@ -89,7 +92,7 @@ class SkinCareAI {
         const token = localStorage.getItem('oslai_token');
         if (token) {
             try {
-                const response = await fetch('/api/user', {
+                const response = await fetch(`${this.API_BASE_URL}/api/user`, {
                     headers: {
                         'Authorization': `Bearer ${token}`
                     }
@@ -139,7 +142,7 @@ class SkinCareAI {
         const password = document.getElementById('passwordInput').value;
 
         try {
-            const endpoint = this.isSignUp ? '/api/auth/signup' : '/api/auth/signin';
+            const endpoint = this.isSignUp ? `${this.API_BASE_URL}/api/auth/signup` : `${this.API_BASE_URL}/api/auth/signin`;
             const response = await fetch(endpoint, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
@@ -192,7 +195,7 @@ class SkinCareAI {
 
         try {
             const token = localStorage.getItem('oslai_token');
-            const response = await fetch('/api/stripe/checkout', {
+            const response = await fetch(`${this.API_BASE_URL}/api/stripe/checkout`, {
                 method: 'POST',
                 headers: {
                     'Authorization': `Bearer ${token}`,
@@ -330,7 +333,7 @@ class SkinCareAI {
 
         try {
             const token = localStorage.getItem('oslai_token');
-            const response = await fetch('/api/chat', {
+            const response = await fetch(`${this.API_BASE_URL}/api/chat`, {
                 method: 'POST',
                 headers: {
                     'Authorization': `Bearer ${token}`,

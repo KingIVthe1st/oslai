@@ -39,9 +39,15 @@ export default {
 		const url = new URL(request.url);
 		const path = url.pathname;
 
-		// CORS headers
+		// CORS headers - Allow both Pages and Workers.dev domains
+		const allowedOrigins = [
+			'https://osl-skin-ai.pages.dev',
+			'https://osl-skin-ai.ivanleejackson.workers.dev',
+			env.FRONTEND_URL
+		];
+		const origin = request.headers.get('Origin') || '';
 		const corsHeaders = {
-			'Access-Control-Allow-Origin': env.FRONTEND_URL || '*',
+			'Access-Control-Allow-Origin': allowedOrigins.includes(origin) ? origin : 'https://osl-skin-ai.pages.dev',
 			'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
 			'Access-Control-Allow-Headers': 'Content-Type, Authorization',
 		};
