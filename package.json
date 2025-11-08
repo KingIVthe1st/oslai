@@ -25,6 +25,7 @@
     "wrangler": "^3.86.1"
   },
   "dependencies": {
+    "@cloudflare/kv-asset-handler": "^0.4.0",
     "stripe": "^17.4.0"
   }
 }

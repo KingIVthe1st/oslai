@@ -4,18 +4,18 @@ compatibility_date = "2024-01-01"
 compatibility_flags = ["nodejs_compat"]
 
 # Account ID - replace with your Cloudflare account ID
-account_id = ""
+account_id = "1ce7c9cf3cebf8754e21c13cbd317b57"
 
-# Workers Routes
-routes = [
-  { pattern = "oslai.yourdomain.com/*", zone_name = "yourdomain.com" }
-]
+# Workers Routes (disabled - using workers.dev subdomain)
+# routes = [
+#   { pattern = "oslai.yourdomain.com/*", zone_name = "yourdomain.com" }
+# ]
 
 # D1 Database binding
 [[d1_databases]]
 binding = "DB"
 database_name = "oslai-db"
-database_id = ""
+database_id = "7f91e6a2-c862-4159-8e0c-7aba1da14d5d"
 
 # R2 Bucket binding for image storage
 [[r2_buckets]]
@@ -24,7 +24,7 @@ bucket_name = "oslai-images"
 
 # Environment variables (secrets managed via wrangler secret put)
 [vars]
-FRONTEND_URL = "https://oslai.yourdomain.com"
+FRONTEND_URL = "https://osl-skin-ai.ivanleejackson.workers.dev"
 
 # Secrets to set via CLI:
 # wrangler secret put GROK_API_KEY
@@ -40,6 +40,3 @@ bucket = "./public"
 # Build configuration
 [build]
 command = ""
-
-[build.upload]
-format = "service-worker"

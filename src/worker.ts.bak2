@@ -79,11 +79,6 @@ export default {
 
 		// Serve static files for all other routes
 		try {
-			// Debug logging
-			console.log('Attempting to serve asset for path:', path);
-			console.log('Has __STATIC_CONTENT?', !!env.__STATIC_CONTENT);
-			console.log('Has __STATIC_CONTENT_MANIFEST?', !!env.__STATIC_CONTENT_MANIFEST);
-
 			return await getAssetFromKV(
 				{
 					request,
@@ -91,13 +86,28 @@ export default {
 				} as any,
 				{
 					ASSET_NAMESPACE: env.__STATIC_CONTENT,
-					ASSET_MANIFEST: env.__STATIC_CONTENT_MANIFEST,
+					ASSET_MANIFEST: JSON.parse('{}'),
 				}
 			);
 		} catch (e) {
 			// If asset not found, return 404
-			console.error('Asset error:', e);
-			return new Response(`Not Found: ${path}`, { status: 404, headers: corsHeaders });
+			return new Response('Not Found', { status: 404, headers: corsHeaders });
+		}
+		// Serve static files for all other routes
+		try {
+			return await getAssetFromKV(
+				{
+					request,
+					waitUntil: ctx.waitUntil.bind(ctx),
+				} as any,
+				{
+					ASSET_NAMESPACE: env.__STATIC_CONTENT,
+					ASSET_MANIFEST: JSON.parse('{}'),
+				}
+			);
+		} catch (e) {
+			// If asset not found, return 404
+			return new Response('Not Found', { status: 404, headers: corsHeaders });
 		}
 
 		} catch (error) {
