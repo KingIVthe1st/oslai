@@ -1,0 +1,30 @@
+{
+  "name": "osl-skin-ai",
+  "version": "1.0.0",
+  "description": "AI-Powered Skin Care Assistant by Organic Skin Lightener",
+  "main": "src/worker.ts",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "tail": "wrangler tail",
+    "db:init": "wrangler d1 execute oslai-db --file=./schema.sql",
+    "db:query": "wrangler d1 execute oslai-db --command"
+  },
+  "keywords": [
+    "cloudflare",
+    "workers",
+    "ai",
+    "skincare",
+    "grok"
+  ],
+  "author": "Organic Skin Lightener",
+  "license": "MIT",
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20241127.0",
+    "typescript": "^5.3.3",
+    "wrangler": "^3.86.1"
+  },
+  "dependencies": {
+    "stripe": "^17.4.0"
+  }
+}
