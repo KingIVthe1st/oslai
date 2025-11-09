@@ -739,9 +739,10 @@ html {
     margin-bottom: var(--space-10);
     letter-spacing: var(--tracking-tight);
     position: relative;
-    display: inline-block;
-    left: 50%;
-    transform: translateX(-50%);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
 }
 
 .section-title::after {
@@ -754,6 +755,14 @@ html {
     height: 4px;
     background: var(--gradient-primary);
     border-radius: var(--radius-full);
+}
+
+.section-subtitle {
+    text-align: center;
+    font-size: var(--text-lg);
+    color: var(--text-secondary);
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .features-grid {
