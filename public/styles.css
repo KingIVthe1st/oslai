@@ -1009,6 +1009,9 @@ html {
     gap: var(--space-8);
     position: relative;
     z-index: 1;
+    justify-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 /* Connection Lines (Desktop) */
