@@ -299,8 +299,8 @@ html {
 }
 
 .logo-img {
-    width: 50px;
-    height: 50px;
+    width: 80px;
+    height: 80px;
     object-fit: contain;
     transition: transform var(--transition-base);
 }
@@ -317,6 +317,30 @@ html {
 
 .nav-logo:hover .logo-img {
     transform: scale(1.05) rotate(-5deg);
+}
+
+/* Footer Logo */
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    margin-bottom: var(--space-4);
+}
+
+.footer-logo-img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.footer-logo-text {
+    background: var(--gradient-primary-soft);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: var(--font-extrabold);
+    font-size: var(--text-xl);
+    letter-spacing: var(--tracking-tight);
 }
 
 .nav-logo h2 {
