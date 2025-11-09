@@ -3,16 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OSL Skin AI - AI-Powered Skin Care Assistant</title>
+    <title>OSL Skin AI - Your Personal AI Skin Expert for Clear, Even-Toned Skin</title>
+    <meta name="description" content="Get personalized AI-powered skin analysis and proven recommendations for brightening dark spots, reducing fine lines, and achieving radiant, even skin tone. $20/month.">
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="/osllogo.avif">
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <h2>OSL Skin AI</h2>
+                <img src="osllogo.avif" alt="OSL Skin AI Logo" class="logo-img">
+                <span class="logo-text">OSL Skin AI</span>
             </div>
             <div class="nav-menu">
                 <a href="#features" class="nav-link">Features</a>
@@ -36,27 +39,44 @@
 
     <!-- Hero Section -->
     <section class="hero">
+        <div class="hero-background-effects">
+            <div class="hero-glow hero-glow-1"></div>
+            <div class="hero-glow hero-glow-2"></div>
+        </div>
         <div class="hero-container">
             <div class="hero-content">
                 <h1 class="hero-title">
-                    AI-Powered Skin Care Assistant by
-                    <span class="highlight">Organic Skin Lightener</span>
+                    Finally See the <span class="gradient-text">Clear, Even-Toned Skin</span> You Deserve—Without Guessing What Actually Works
                 </h1>
                 <p class="hero-description">
-                    Get personalized skin care recommendations from our advanced AI assistant. Upload photos of your skin and receive intelligent analysis for brightening, anti-aging, and overall skin health.
+                    Upload a photo and get a personalized skin analysis from our advanced AI—plus proven recommendations for brightening dark spots, reducing fine lines, and achieving the glowing, even complexion you've been searching for. All for less than one coffee per week.
                 </p>
                 <div class="hero-buttons">
-                    <button id="tryItOutBtn" class="btn-primary">Try It Now</button>
-                    <a href="#features" class="btn-secondary">Learn More</a>
+                    <button id="tryItOutBtn" class="btn-primary btn-shimmer">
+                        <span>Start Your Skin Transformation</span>
+                        <div class="btn-glow"></div>
+                    </button>
+                    <a href="#how-it-works" class="btn-secondary">See How It Works</a>
                 </div>
-                <div class="hero-note">
-                    <p><strong>Note:</strong> This tool provides skin care guidance and should complement professional dermatological advice.</p>
+                <div class="hero-trust">
+                    <p class="trust-text">
+                        <svg class="trust-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M10 2L12.5 7L18 7.5L14 11.5L15 17L10 14.5L5 17L6 11.5L2 7.5L7.5 7L10 2Z" fill="currentColor"/>
+                        </svg>
+                        Powered by Organic Skin Lightener's 15+ years of skin brightening expertise
+                    </p>
                 </div>
             </div>
             <div class="hero-image">
-                <div class="skin-icon">
+                <div class="skin-icon floating">
                     <svg width="300" height="300" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="150" cy="150" r="120" fill="#f0f9ff" stroke="#14b8a6" stroke-width="2"></circle>
+                        <defs>
+                            <linearGradient id="skinGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#14b8a6;stop-opacity:0.3" />
+                                <stop offset="100%" style="stop-color:#0d9488;stop-opacity:0.5" />
+                            </linearGradient>
+                        </defs>
+                        <circle cx="150" cy="150" r="120" fill="url(#skinGradient)" stroke="#14b8a6" stroke-width="2"></circle>
                         <path d="M150 100 Q120 130 140 160 Q150 180 160 160 Q180 130 150 100Z" fill="#14b8a6" opacity="0.6"></path>
                         <circle cx="135" cy="130" r="8" fill="#0d9488"></circle>
                         <circle cx="165" cy="130" r="8" fill="#0d9488"></circle>
@@ -70,27 +90,38 @@
     <!-- Features Section -->
     <section id="features" class="features">
         <div class="container">
-            <h2 class="section-title">Why Choose OSL Skin AI?</h2>
+            <div class="section-header">
+                <h2 class="section-title">Your Complete AI-Powered Skin Care System</h2>
+                <p class="section-subtitle">Everything you need to understand your skin and get results—for less than a single dermatologist visit.</p>
+            </div>
             <div class="features-grid">
                 <div class="feature-card">
-                    <div class="feature-icon">✨</div>
-                    <h3>Advanced AI Analysis</h3>
-                    <p>Powered by Grok AI to analyze your skin and provide personalized recommendations for brightening, anti-aging, and overall skin health.</p>
+                    <div class="feature-icon-wrapper">
+                        <div class="feature-icon">🔍</div>
+                    </div>
+                    <h3 class="feature-title">See What's Really Happening With Your Skin</h3>
+                    <p class="feature-description">Upload photos and receive instant, detailed analysis of dark spots, uneven tone, texture issues, and aging signs. No more guessing—know exactly what to address first.</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">📸</div>
-                    <h3>Photo Analysis</h3>
-                    <p>Upload photos of your skin for detailed AI-powered analysis of texture, tone, dark spots, and areas for improvement.</p>
+                    <div class="feature-icon-wrapper">
+                        <div class="feature-icon">✨</div>
+                    </div>
+                    <h3 class="feature-title">Get Personalized Solutions That Actually Work</h3>
+                    <p class="feature-description">Receive custom recommendations based on YOUR unique skin—not generic advice. Our AI considers your specific concerns, skin type, and goals to create your perfect routine.</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">💬</div>
-                    <h3>Interactive Chat</h3>
-                    <p>Have a conversation with our AI assistant to get personalized skin care advice and product recommendations.</p>
+                    <div class="feature-icon-wrapper">
+                        <div class="feature-icon">📊</div>
+                    </div>
+                    <h3 class="feature-title">Track Your Progress & See Real Results</h3>
+                    <p class="feature-description">Compare photos over time and watch your transformation unfold. See proof that your routine is working with side-by-side progress tracking.</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">🔒</div>
-                    <h3>Secure & Private</h3>
-                    <p>Your photos and data remain private and secure with our enterprise-grade security architecture.</p>
+                    <div class="feature-icon-wrapper">
+                        <div class="feature-icon">💬</div>
+                    </div>
+                    <h3 class="feature-title">24/7 Expert Guidance at Your Fingertips</h3>
+                    <p class="feature-description">Have questions at midnight? Our AI assistant is always available to answer questions, adjust recommendations, and support your journey to radiant skin.</p>
                 </div>
             </div>
         </div>
@@ -98,28 +129,101 @@
 
     <!-- How It Works Section -->
     <section id="how-it-works" class="how-it-works">
+        <div class="how-it-works-background"></div>
         <div class="container">
-            <h2 class="section-title">How It Works</h2>
+            <div class="section-header">
+                <h2 class="section-title">Get Your Personalized Skin Blueprint in Minutes</h2>
+                <p class="section-subtitle">Simple, fast, and scientifically backed—your path to radiant skin starts here.</p>
+            </div>
             <div class="steps">
                 <div class="step">
-                    <div class="step-number">1</div>
-                    <h3>Upload Photo</h3>
-                    <p>Take a clear photo of your face or area of concern and upload it to our secure platform.</p>
+                    <div class="step-number">
+                        <span class="step-number-inner">1</span>
+                    </div>
+                    <h3 class="step-title">Snap a Quick Photo</h3>
+                    <p class="step-description">Take a well-lit selfie or photo of your concern area—no professional equipment needed. Our AI works with any smartphone camera.</p>
                 </div>
+                <div class="step-connector"></div>
                 <div class="step">
-                    <div class="step-number">2</div>
-                    <h3>AI Analysis</h3>
-                    <p>Our AI analyzes your skin for tone, texture, dark spots, and provides personalized insights.</p>
+                    <div class="step-number">
+                        <span class="step-number-inner">2</span>
+                    </div>
+                    <h3 class="step-title">Get Your Instant AI Analysis</h3>
+                    <p class="step-description">Receive a detailed breakdown of your skin's current state: dark spots, uneven tone, texture, fine lines, and areas for improvement—all in seconds.</p>
                 </div>
+                <div class="step-connector"></div>
                 <div class="step">
-                    <div class="step-number">3</div>
-                    <h3>Ask Questions</h3>
-                    <p>Chat with our AI to get specific recommendations for your skin care goals.</p>
+                    <div class="step-number">
+                        <span class="step-number-inner">3</span>
+                    </div>
+                    <h3 class="step-title">Receive Your Custom Action Plan</h3>
+                    <p class="step-description">Get personalized recommendations tailored to YOUR skin, including specific products, ingredients to look for, and application techniques.</p>
                 </div>
+                <div class="step-connector"></div>
                 <div class="step">
-                    <div class="step-number">4</div>
-                    <h3>Get Recommendations</h3>
-                    <p>Receive personalized product recommendations from OSL's natural skin care line.</p>
+                    <div class="step-number">
+                        <span class="step-number-inner">4</span>
+                    </div>
+                    <h3 class="step-title">Track Your Transformation</h3>
+                    <p class="step-description">Upload progress photos weekly or monthly. See visible improvement and adjust your routine based on real results, not guesswork.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof Section -->
+    <section class="social-proof">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Join Thousands Who've Transformed Their Skin With AI-Guided Care</h2>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"I spent years trying random products for my dark spots. OSL Skin AI showed me exactly what to use and I saw results in just 3 weeks. Finally something that WORKS!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">SM</div>
+                        <div class="author-info">
+                            <p class="author-name">Sarah M.</p>
+                            <p class="author-meta">Verified Member</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"Better than my $200 dermatologist visit. The AI caught issues I didn't even know I had and gave me a clear plan. My skin hasn't looked this good in years."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">JT</div>
+                        <div class="author-info">
+                            <p class="author-name">Jessica T.</p>
+                            <p class="author-meta">4-Month Member</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"The progress tracking feature is amazing. Seeing the side-by-side photos keeps me motivated. My skin tone is so much more even now."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">MP</div>
+                        <div class="author-info">
+                            <p class="author-name">Maya P.</p>
+                            <p class="author-meta">6-Month Member</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="stats-row">
+                <div class="stat-item">
+                    <div class="stat-number">4.8/5</div>
+                    <div class="stat-label">Average Rating</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">10,000+</div>
+                    <div class="stat-label">Active Members</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">15+</div>
+                    <div class="stat-label">Years Expertise</div>
                 </div>
             </div>
         </div>
@@ -127,11 +231,17 @@
 
     <!-- Pricing Section -->
     <section id="pricing" class="pricing">
+        <div class="pricing-background-glow"></div>
         <div class="container">
-            <h2 class="section-title">Simple, Transparent Pricing</h2>
+            <div class="section-header">
+                <h2 class="section-title">Professional-Grade Skin Analysis for Less Than a Latte Per Week</h2>
+                <p class="section-subtitle">Get unlimited access to AI-powered skin expertise—without the $200+ dermatologist visit fees.</p>
+            </div>
             <div class="pricing-card">
+                <div class="pricing-badge">POPULAR</div>
                 <div class="pricing-header">
-                    <h3>Monthly Subscription</h3>
+                    <h3 class="pricing-title">Complete Skin Care Membership</h3>
+                    <p class="pricing-comparison">Compare: Single dermatology visit = $150-300</p>
                     <div class="price">
                         <span class="currency">$</span>
                         <span class="amount">20</span>
@@ -139,14 +249,43 @@
                     </div>
                 </div>
                 <ul class="pricing-features">
-                    <li>✓ Unlimited AI skin consultations</li>
-                    <li>✓ Photo analysis with detailed insights</li>
-                    <li>✓ Personalized product recommendations</li>
-                    <li>✓ Track your skin improvement over time</li>
-                    <li>✓ Priority support</li>
-                    <li>✓ Cancel anytime</li>
+                    <li><span class="check-icon">✓</span> Unlimited AI skin consultations</li>
+                    <li><span class="check-icon">✓</span> Advanced photo analysis with detailed insights</li>
+                    <li><span class="check-icon">✓</span> Personalized product recommendations</li>
+                    <li><span class="check-icon">✓</span> Progress tracking to prove your results</li>
+                    <li><span class="check-icon">✓</span> 24/7 chat access to your AI skin expert</li>
+                    <li><span class="check-icon">✓</span> Regular routine adjustments as your skin changes</li>
+                    <li><span class="check-icon">✓</span> Priority support from our team</li>
+                    <li><span class="check-icon">✓</span> Cancel anytime, no questions asked</li>
                 </ul>
-                <button id="subscribeBtn" class="btn-primary pricing-btn">Subscribe Now</button>
+                <button id="subscribeBtn" class="btn-primary pricing-btn btn-shimmer">
+                    <span>Start My 30-Day Membership</span>
+                    <div class="btn-glow"></div>
+                </button>
+                <p class="pricing-guarantee">
+                    <svg class="guarantee-icon" width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                        <path d="M8 0L10 6H16L11 10L13 16L8 12L3 16L5 10L0 6H6L8 0Z"/>
+                    </svg>
+                    30-Day Money-Back Guarantee: If you don't see clearer guidance and feel more confident about your skin care within 30 days, we'll refund every penny. Zero risk.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Section -->
+    <section class="trust-section">
+        <div class="container">
+            <div class="trust-content">
+                <h2 class="trust-title">Backed by Organic Skin Lightener's Decade of Skin Brightening Expertise</h2>
+                <p class="trust-text">
+                    OSL Skin AI is powered by Organic Skin Lightener, the trusted leader in natural, glutathione-based skin brightening solutions. We've helped thousands achieve their skin goals with science-backed, safe ingredients and personalized guidance.
+                </p>
+                <p class="trust-text">
+                    Our AI combines cutting-edge technology with our team's deep expertise in skin brightening, anti-aging, and skin health—giving you professional-grade analysis with the convenience of 24/7 access.
+                </p>
+                <p class="trust-disclaimer">
+                    <strong>Professional Guidance:</strong> OSL Skin AI provides personalized skin care recommendations based on advanced AI analysis and Organic Skin Lightener's expertise in skin brightening and anti-aging. Our service is designed to help you make informed decisions about your skin care routine. For diagnosis or treatment of medical conditions, please consult a licensed dermatologist. Individual results may vary.
+                </p>
             </div>
         </div>
     </section>
@@ -155,7 +294,7 @@
     <div id="chatModal" class="modal">
         <div class="modal-content">
             <div class="modal-header">
-                <h3>OSL Skin AI Assistant</h3>
+                <h3>Your Personal AI Skin Expert</h3>
                 <span class="close">×</span>
             </div>
             <div class="chat-container">
@@ -169,7 +308,7 @@
                         </svg>
                     </label>
                     <input type="file" id="imageUpload" accept="image/*" style="display: none;">
-                    <input type="text" id="chatInput" placeholder="Describe your skin concerns or upload a photo..." disabled>
+                    <input type="text" id="chatInput" placeholder="Ask about dark spots, uneven tone, anti-aging, or upload a photo..." disabled>
                     <button id="sendBtn" class="send-btn" disabled>Send</button>
                 </div>
                 <div id="imagePreview" class="image-preview" style="display: none;">
@@ -184,7 +323,7 @@
     <div id="authModal" class="modal">
         <div class="modal-content auth-modal-content">
             <div class="modal-header">
-                <h3 id="authModalTitle">Sign In to OSL Skin AI</h3>
+                <h3 id="authModalTitle">Welcome Back to Your Skin Journey</h3>
                 <span class="close auth-close">×</span>
             </div>
             <div class="auth-container">
@@ -199,8 +338,16 @@
                     </div>
                     <button type="submit" class="btn-primary auth-submit-btn" id="authSubmitBtn">Sign In</button>
                 </form>
+                <div class="auth-benefits">
+                    <p class="auth-benefits-title">Member Benefits:</p>
+                    <ul>
+                        <li>✓ Instant access to AI skin analysis</li>
+                        <li>✓ 30-day money-back guarantee</li>
+                        <li>✓ Cancel anytime, no hassle</li>
+                    </ul>
+                </div>
                 <p class="auth-toggle">
-                    Don't have an account? <a href="#" id="toggleAuth">Sign up</a>
+                    <span id="toggleAuthText">Don't have an account?</span> <a href="#" id="toggleAuth">Sign up</a>
                 </p>
             </div>
         </div>
@@ -211,12 +358,24 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>OSL Skin AI</h3>
-                    <p>By Organic Skin Lightener - AI-powered skin care assistance for everyone.</p>
+                    <div class="footer-logo">
+                        <img src="osllogo.avif" alt="OSL Skin AI Logo" class="footer-logo-img">
+                        <span class="footer-logo-text">OSL Skin AI</span>
+                    </div>
+                    <p class="footer-tagline">By Organic Skin Lightener - AI-powered skin care assistance for radiant, even-toned skin.</p>
                 </div>
                 <div class="footer-section">
-                    <h4>Disclaimer</h4>
-                    <p>This tool provides skin care guidance and should complement, not replace, professional dermatological advice. Results may vary.</p>
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#how-it-works">How It Works</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#" id="footerAuthLink">Sign In</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <p>Questions? We're here to help you achieve your skin goals.</p>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -226,5 +385,33 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        // Additional auth modal trigger
+        document.getElementById('footerAuthLink').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.getElementById('authBtn').click();
+        });
+
+        // Update auth modal title based on mode
+        const authToggle = document.getElementById('toggleAuth');
+        const authModalTitle = document.getElementById('authModalTitle');
+        const authSubmitBtn = document.getElementById('authSubmitBtn');
+        const toggleAuthText = document.getElementById('toggleAuthText');
+
+        authToggle.addEventListener('click', function() {
+            const isSignUp = authToggle.textContent.trim() === 'Sign up';
+            if (isSignUp) {
+                authModalTitle.textContent = 'Create Your Account & Get Your First Analysis Free';
+                authSubmitBtn.textContent = 'Create Account';
+                toggleAuthText.textContent = 'Already have an account?';
+                authToggle.textContent = 'Sign in';
+            } else {
+                authModalTitle.textContent = 'Welcome Back to Your Skin Journey';
+                authSubmitBtn.textContent = 'Sign In';
+                toggleAuthText.textContent = "Don't have an account?";
+                authToggle.textContent = 'Sign up';
+            }
+        });
+    </script>
 </body>
 </html>

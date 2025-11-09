@@ -32,6 +32,12 @@ class SkinCareAI {
     }
 
     initializeEventListeners() {
+        // Premium navbar scroll effect
+        this.initNavbarScroll();
+
+        // Mobile menu toggle
+        this.initMobileMenu();
+
         // Modal controls
         this.tryItOutBtn.addEventListener('click', () => this.handleTryItOut());
         this.subscribeBtn.addEventListener('click', () => this.handleSubscribe());
@@ -455,6 +461,56 @@ class SkinCareAI {
     scrollToBottom() {
         this.chatMessages.scrollTop = this.chatMessages.scrollHeight;
     }
+
+    // Premium navbar scroll effect
+    initNavbarScroll() {
+        let lastScroll = 0;
+        const navbar = document.querySelector('.navbar');
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+
+            // Add scrolled class when scrolled down
+            if (currentScroll > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+
+            lastScroll = currentScroll;
+        });
+    }
+
+    // Mobile menu toggle functionality
+    initMobileMenu() {
+        const mobileToggle = document.querySelector('.mobile-menu-toggle');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+
+        if (!mobileToggle || !mobileMenu) return;
+
+        // Toggle menu
+        mobileToggle.addEventListener('click', () => {
+            mobileToggle.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+        });
+
+        // Close menu when clicking a link
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileToggle.classList.remove('active');
+                mobileMenu.classList.remove('active');
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!mobileToggle.contains(e.target) && !mobileMenu.contains(e.target)) {
+                mobileToggle.classList.remove('active');
+                mobileMenu.classList.remove('active');
+            }
+        });
+    }
 }
 
 // Initialize the app when DOM is ready
@@ -473,17 +529,5 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
             }
         });
-    });
-
-    // Navbar scroll effect
-    window.addEventListener('scroll', function() {
-        const navbar = document.querySelector('.navbar');
-        if (window.scrollY > 50) {
-            navbar.style.background = 'rgba(255, 255, 255, 0.98)';
-            navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
-        } else {
-            navbar.style.background = 'rgba(255, 255, 255, 0.95)';
-            navbar.style.boxShadow = 'none';
-        }
     });
 });
