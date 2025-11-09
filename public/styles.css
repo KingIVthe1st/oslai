@@ -299,8 +299,8 @@ html {
 }
 
 .logo-img {
-    width: 80px;
-    height: 80px;
+    width: 96px;
+    height: 96px;
     object-fit: contain;
     transition: transform var(--transition-base);
 }
@@ -328,8 +328,8 @@ html {
 }
 
 .footer-logo-img {
-    width: 60px;
-    height: 60px;
+    width: 72px;
+    height: 72px;
     object-fit: contain;
 }
 
